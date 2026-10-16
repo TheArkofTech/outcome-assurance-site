@@ -1,0 +1,71 @@
+{
+  "schema": "outcome-assurance/v1",
+  "as_of": "2026-10-16T00:06:00Z",
+  "inputs": {
+    "events_sha256": "56c813a2f8e5c3dcc714f1c8698965b608d61fb1a1ad6e65843be3253bfad691",
+    "receipts_sha256": "91cf3411bc6dfddf71c9c248281894ea73a0ce9b6aa934b03985e36f62cac4fc",
+    "provenance": "separate_files_unverified"
+  },
+  "summary": {
+    "PROVEN": 1,
+    "FALSE_GREEN": 3,
+    "UNKNOWN": 1,
+    "FAILED": 1,
+    "PENDING": 0
+  },
+  "runs": [
+    {
+      "run_id": "demo-soft",
+      "verdict": "FALSE_GREEN",
+      "findings": [
+        {
+          "code": "TOOL_SOFT_ERROR"
+        }
+      ]
+    },
+    {
+      "run_id": "demo-orphan",
+      "verdict": "UNKNOWN",
+      "findings": [
+        {
+          "code": "ORPHANED_RUN"
+        }
+      ]
+    },
+    {
+      "run_id": "demo-missing",
+      "verdict": "FALSE_GREEN",
+      "findings": [
+        {
+          "code": "MISSING_RECEIPT"
+        }
+      ]
+    },
+    {
+      "run_id": "demo-duplicate",
+      "verdict": "FALSE_GREEN",
+      "findings": [
+        {
+          "code": "DUPLICATE_EFFECT"
+        }
+      ]
+    },
+    {
+      "run_id": "demo-silent",
+      "verdict": "FAILED",
+      "findings": [
+        {
+          "code": "TOOL_SOFT_ERROR"
+        },
+        {
+          "code": "SILENT_FAILURE"
+        }
+      ]
+    },
+    {
+      "run_id": "demo-success",
+      "verdict": "PROVEN",
+      "findings": []
+    }
+  ]
+}
